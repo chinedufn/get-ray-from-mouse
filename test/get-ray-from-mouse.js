@@ -7,8 +7,8 @@ test('Raycast', function (t) {
   // Create a view matrix that is looking straight down
   // from above
   var camera = mat4.create()
-  mat4.translate(camera, camera, [0, 0, -10])
   mat4.rotateX(camera, camera, -Math.PI / 2)
+  mat4.translate(camera, camera, [0, 0, -10])
 
   var viewMatrix = []
   mat4.invert(viewMatrix, camera)
