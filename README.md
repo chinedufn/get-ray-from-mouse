@@ -92,6 +92,8 @@ Type: `Array[16]`
 
 The y position of your mouse in your canvas. Available through `offsetY` of your mouse events
 
+The top of your canvas is `y = 0`, the bottom is `y = height`
+
 ## TODO:
 
 - [ ] benchmark
