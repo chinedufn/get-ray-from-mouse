@@ -1,0 +1,40 @@
+{
+  "name": "get-ray-from-mouse",
+  "version": "0.0.1",
+  "description": "Get the normalized ray that your mouse is projecting into your scene",
+  "main": "src/get-ray-from-mouse.js",
+  "scripts": {
+    "test": "standard && tape test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinedufn/get-ray-from-mouse.git"
+  },
+  "keywords": [
+    "ray",
+    "raycast",
+    "mouse",
+    "camera",
+    "position",
+    "collision",
+    "click",
+    "picking",
+    "pick",
+    "coordinate"
+  ],
+  "author": "Chinedu Francis Nwafili <frankie.nwafili@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chinedufn/get-ray-from-mouse/issues"
+  },
+  "homepage": "https://github.com/chinedufn/get-ray-from-mouse#readme",
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "gl-mat4": "^1.1.4",
+    "gl-vec3": "^1.0.3",
+    "gl-vec4": "^1.0.1"
+  }
+}
