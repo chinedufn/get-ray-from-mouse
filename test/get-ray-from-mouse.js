@@ -22,7 +22,8 @@ test('Raycast', function (t) {
     y: 50
   }
 
-  var ray = getRay(opts)
+  var ray = []
+  getRay(ray, opts)
   // Round to zero for our deep equal check
   if (ray[2] < 0.00000002) {
     ray[2] = 0

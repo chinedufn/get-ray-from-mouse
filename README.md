@@ -34,14 +34,22 @@ var opts = {
   y: 50
 }
 
-var ray = getRay(opts)
+var ray = []
+getRay(ray, opts)
 console.log(ray)
 // [0, -1, 0]
 ```
 
 ## API
 
-### `getRay(options)` -> `normalizedWorldSpaceRay`
+### `getRay(normalizedWorldSpaceRay, options)` -> `normalizedWorldSpaceRay`
+
+#### normalizedWorldSpaceRay
+
+Type: `Array[3]
+
+You provide an array and `get-ray-from-mouse` will set the `[0], [1], [2]` elements of your array to your
+normalized world space ray that your mouse casts.
 
 #### options
 
@@ -56,37 +64,37 @@ var options = {
 }
 ```
 
-##### view
+##### options.view
 
 Type: `Array[16]`
 
 Your view matrix
 
-##### perspective
+##### options.perspective
 
 Type: `Array[16]`
 
 Your perspective matrix
 
-##### width
+##### options.width
 
 Type: `Number`
 
 The width of your canvas
 
-##### height
+##### options.height
 
 Type: `Number`
 
 The height of your canvas
 
-##### x
+##### options.x
 
 Type: `Number`
 
 The x position of your mouse in your canvas. Available through `offsetX` of your mouse events
 
-##### y
+##### options.y
 
 Type: `Array[16]`
 

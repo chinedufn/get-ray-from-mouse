@@ -12,7 +12,6 @@ var eyeCoords = []
 var worldCoords = []
 var inverseProj = []
 var inverseView = []
-var normalizedMouseClickRayVec3 = []
 
 /**
  * Go from 2D mouse coordinates to a normalized 3d world space ray
@@ -21,7 +20,7 @@ var normalizedMouseClickRayVec3 = []
  *
  * TODO: Benchnark
  */
-function getRayFromMouse (opts) {
+function getRayFromMouse (normalizedRay, opts) {
   x = (2.0 * opts.x / opts.width) - 1.0
   y = 1.0 - (2.0 * opts.y / opts.height)
 
@@ -42,11 +41,11 @@ function getRayFromMouse (opts) {
   y = worldCoords[1]
   z = worldCoords[2]
 
-  normalizedMouseClickRayVec3[0] = x
-  normalizedMouseClickRayVec3[1] = y
-  normalizedMouseClickRayVec3[2] = z
+  normalizedRay[0] = x
+  normalizedRay[1] = y
+  normalizedRay[2] = z
 
-  vec3Normalize(normalizedMouseClickRayVec3, normalizedMouseClickRayVec3)
+  vec3Normalize(normalizedRay, normalizedRay)
 
-  return normalizedMouseClickRayVec3
+  return normalizedRay
 }
