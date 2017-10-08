@@ -1,6 +1,6 @@
 {
   "name": "get-ray-from-mouse",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Get the normalized ray that your mouse is projecting into your scene",
   "main": "src/get-ray-from-mouse.js",
   "scripts": {
